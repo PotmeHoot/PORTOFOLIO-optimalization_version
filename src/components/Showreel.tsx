@@ -1,33 +1,16 @@
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import { Maximize2, Volume2 } from "lucide-react";
 import { SectionWrapper } from "./ui/SectionWrapper";
 import { useSiteContent } from "../hooks/useSiteContent";
 import { Asset } from "./ui/Asset";
 import { VideoPlaceholder } from "./portfolio/ProjectPlaceholders";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 export const Showreel = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const isInView = useInView(videoRef, { amount: 0.5 });
   const [videoError, setVideoError] = useState(false);
   const { content } = useSiteContent();
   const { showreel } = content;
-
-  useEffect(() => {
-    if (!videoRef.current || videoError) return;
-
-    if (isInView) {
-      const playPromise = videoRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          // Autoplay was prevented
-          console.log("Autoplay prevented by browser");
-        });
-      }
-    } else {
-      videoRef.current.pause();
-    }
-  }, [isInView, videoError]);
 
   return (
     <SectionWrapper id="showreel" className="bg-bg-secondary/50">

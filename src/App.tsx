@@ -3,21 +3,32 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { lazy, Suspense } from "react";
 import { ScrollProgress } from "./components/ScrollProgress";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { Portfolio } from "./components/Portfolio";
 import { Showreel } from "./components/Showreel";
-import { About } from "./components/About";
-import { Services } from "./components/Services";
-import { ARShowcase } from "./components/ARShowcase";
-import { Expertise } from "./components/Expertise";
-import { Collaboration } from "./components/Collaboration";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
+import { Portfolio } from "./components/Portfolio";
+
+// Lazy load non-critical sections that are further down the page
+const About = lazy(() => import("./components/About").then(m => ({ default: m.About })));
+const Services = lazy(() => import("./components/Services").then(m => ({ default: m.Services })));
+const ARShowcase = lazy(() => import("./components/ARShowcase").then(m => ({ default: m.ARShowcase })));
+const Expertise = lazy(() => import("./components/Expertise").then(m => ({ default: m.Expertise })));
+const Collaboration = lazy(() => import("./components/Collaboration").then(m => ({ default: m.Collaboration })));
+const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
+const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 
 import { ContentProvider, useContent } from "./context/ContentContext";
-import { SiteContent } from "./types/content";
+import { LazySection } from "./components/ui/LazySection";
+
+function SectionLoader() {
+  return (
+    <div className="w-full h-[400px] flex items-center justify-center bg-bg-secondary/50 rounded-[32px] animate-pulse">
+      <div className="w-8 h-8 border-2 border-white/10 border-t-white/40 rounded-full animate-spin" />
+    </div>
+  );
+}
 
 function AppContent() {
   const { content, isLoading, error } = useContent();
@@ -59,14 +70,18 @@ function AppContent() {
         <Hero />
         <Showreel />
         <Portfolio />
-        <About />
-        <Services />
-        <ARShowcase />
-        <Expertise />
-        <Collaboration />
-        <Contact />
+        <Suspense fallback={<SectionLoader />}>
+          <LazySection><About /></LazySection>
+          <LazySection><Services /></LazySection>
+          <LazySection><ARShowcase /></LazySection>
+          <LazySection><Expertise /></LazySection>
+          <LazySection><Collaboration /></LazySection>
+          <LazySection><Contact /></LazySection>
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <LazySection minHeight="100px"><Footer /></LazySection>
+      </Suspense>
     </div>
   );
 }

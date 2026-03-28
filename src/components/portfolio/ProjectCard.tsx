@@ -88,6 +88,7 @@ export const ProjectCard = memo(({ item, index, onSelect }: ProjectCardProps) =>
         {/* Layer 1: Media Frame (Static Poster) */}
         <ProjectMediaFrame 
           poster={`/assets/work/${item.folder}/${item.poster}`} 
+          webpPoster={item.webpPoster ? `/assets/work/${item.folder}/${item.webpPoster}` : undefined}
           title={item.title} 
           isIdle={isIdle} 
           isActive={isActive} 

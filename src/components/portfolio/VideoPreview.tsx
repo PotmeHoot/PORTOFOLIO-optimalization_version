@@ -5,6 +5,8 @@ import { Asset } from "../ui/Asset";
 
 interface VideoPreviewProps {
   src: string;
+  poster?: string;
+  webpPoster?: string;
   isVisible: boolean;
   onLoadedMetadata: () => void;
   onError: () => void;
@@ -13,6 +15,8 @@ interface VideoPreviewProps {
 
 export const VideoPreview = ({
   src,
+  poster,
+  webpPoster,
   isVisible,
   onLoadedMetadata,
   onError,
@@ -38,6 +42,8 @@ export const VideoPreview = ({
       <Asset
         ref={videoRef}
         src={src}
+        poster={poster}
+        webpSrc={webpPoster}
         alt="Project Preview Video"
         className="w-full h-full object-cover"
         containerClassName="w-full h-full"

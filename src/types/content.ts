@@ -1,6 +1,67 @@
-import * as LucideIcons from "lucide-react";
+import { 
+  CheckCircle2 as CheckCircle, 
+  ArrowRight, 
+  Sparkles, 
+  Video, 
+  QrCode, 
+  ExternalLink, 
+  Maximize2, 
+  Volume2, 
+  Play, 
+  Image as ImageIcon, 
+  X, 
+  ArrowLeft, 
+  Mail, 
+  Linkedin, 
+  Instagram, 
+  Globe, 
+  Layers, 
+  Zap, 
+  Target, 
+  Cpu, 
+  Smartphone, 
+  Palette, 
+  Monitor, 
+  Code, 
+  Briefcase, 
+  MessageSquare, 
+  Layout, 
+  AlertCircle,
+  LucideIcon
+} from "lucide-react";
 
-export type IconName = keyof typeof LucideIcons;
+export const Icons: Record<string, LucideIcon> = {
+  CheckCircle,
+  ArrowRight,
+  Sparkles,
+  Video,
+  QrCode,
+  ExternalLink,
+  Maximize2,
+  Volume2,
+  Play,
+  ImageIcon,
+  X,
+  ArrowLeft,
+  Mail,
+  Linkedin,
+  Instagram,
+  Globe,
+  Layers,
+  Zap,
+  Target,
+  Cpu,
+  Smartphone,
+  Palette,
+  Monitor,
+  Code,
+  Briefcase,
+  MessageSquare,
+  Layout,
+  AlertCircle
+};
+
+export type IconName = keyof typeof Icons;
 
 export interface SiteSettings {
   title: string;
@@ -65,6 +126,8 @@ export type MediaType = 'image' | 'video' | 'mixed';
 export interface ProjectAsset {
   type: 'image' | 'video';
   file: string;
+  webpFile?: string;
+  srcSet?: string;
 }
 
 export interface Project {
@@ -73,6 +136,7 @@ export interface Project {
   category: string;
   folder: string;
   poster: string;
+  webpPoster?: string;
   assets: ProjectAsset[];
   client?: string;
   agency?: string;

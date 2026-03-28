@@ -31,6 +31,7 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
 
   const heroAsset = project.assets.find(a => a.type === 'video') || project.assets[0];
   const heroUrl = heroAsset ? `/assets/work/${project.folder}/${heroAsset.file}` : `/assets/work/${project.folder}/${project.poster}`;
+  const heroWebpUrl = heroAsset?.webpFile ? `/assets/work/${project.folder}/${heroAsset.webpFile}` : (project.webpPoster ? `/assets/work/${project.folder}/${project.webpPoster}` : undefined);
   const isHeroVideo = heroAsset?.type === 'video';
 
   return (
@@ -75,6 +76,7 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
             ) : (
               <Asset
                 src={`/assets/work/${project.folder}/${project.poster}`}
+                webpSrc={project.webpPoster ? `/assets/work/${project.folder}/${project.webpPoster}` : undefined}
                 alt={project.title}
                 className="w-full h-full object-cover"
               />
@@ -168,6 +170,8 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
                         <div className="relative group">
                           <Asset
                             src={`/assets/work/${project.folder}/${asset.file}`}
+                            webpSrc={asset.webpFile ? `/assets/work/${project.folder}/${asset.webpFile}` : undefined}
+                            srcSet={asset.srcSet}
                             alt={`${project.title} asset ${index + 1}`}
                             className="w-full h-auto"
                           />

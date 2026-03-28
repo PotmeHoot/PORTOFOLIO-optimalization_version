@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { useSiteContent } from "../hooks/useSiteContent";
 import { FADE_UP_VARIANTS, DEFAULT_TRANSITION } from "../constants/motion";
 import { ProjectCard } from "./portfolio/ProjectCard";
-import { ProjectDetail } from "./portfolio/ProjectDetail";
 import { SectionHeader } from "./ui/SectionHeader";
 import { SectionWrapper } from "./ui/SectionWrapper";
 import { Project } from "../types/content";
+
+const ProjectDetail = lazy(() => import("./portfolio/ProjectDetail").then(m => ({ default: m.ProjectDetail })));
 
 export const Portfolio = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -70,10 +71,14 @@ export const Portfolio = () => {
       </SectionWrapper>
 
       {/* Project Detail Modal */}
-      <ProjectDetail 
-        project={selectedProject} 
-        onClose={() => setSelectedProject(null)} 
-      />
+      <Suspense fallback={null}>
+        {selectedProject && (
+          <ProjectDetail 
+            project={selectedProject} 
+            onClose={() => setSelectedProject(null)} 
+          />
+        )}
+      </Suspense>
     </>
   );
 };

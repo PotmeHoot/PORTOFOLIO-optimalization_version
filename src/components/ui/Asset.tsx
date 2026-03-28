@@ -17,11 +17,14 @@ interface AssetProps {
   errorFallback?: ReactNode;
   onLoad?: () => void;
   onError?: () => void;
+  srcSet?: string;
+  sizes?: string;
+  webpSrc?: string;
   [key: string]: any;
 }
 
-const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".webp"];
-const VIDEO_EXTENSIONS = [".mp4"];
+const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".webp", ".png", ".gif"];
+const VIDEO_EXTENSIONS = [".mp4", ".webm", ".ogg"];
 
 export const Asset = forwardRef<HTMLVideoElement | HTMLImageElement, AssetProps>(({
   src,
@@ -37,6 +40,9 @@ export const Asset = forwardRef<HTMLVideoElement | HTMLImageElement, AssetProps>
   errorFallback,
   onLoad,
   onError,
+  srcSet,
+  sizes,
+  webpSrc,
   ...props
 }, ref) => {
   const [error, setError] = useState(false);
@@ -50,6 +56,11 @@ export const Asset = forwardRef<HTMLVideoElement | HTMLImageElement, AssetProps>
 
   const getExtension = (url: string) => {
     try {
+      // Handle base64 or blob URLs
+      if (url.startsWith('data:') || url.startsWith('blob:')) {
+        const mimeType = url.split(':')[1].split(';')[0];
+        return `.${mimeType.split('/')[1]}`;
+      }
       const path = new URL(url, window.location.origin).pathname;
       return path.substring(path.lastIndexOf(".")).toLowerCase();
     } catch {
@@ -79,7 +90,7 @@ export const Asset = forwardRef<HTMLVideoElement | HTMLImageElement, AssetProps>
     }
   }, [src, extension, isImage, isVideo, onError]);
 
-  // Lazy loading for videos using IntersectionObserver
+  // Lazy loading and visibility control for videos using IntersectionObserver
   useEffect(() => {
     if (!isVideo || !internalRef.current || !containerRef.current || error) return;
 
@@ -88,14 +99,22 @@ export const Asset = forwardRef<HTMLVideoElement | HTMLImageElement, AssetProps>
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             if (internalRef.current) {
-              internalRef.current.load();
+              // Only load if not already loaded
+              if (internalRef.current.readyState === 0) {
+                internalRef.current.load();
+              }
+              
               if (autoPlay) {
                 internalRef.current.play().catch(() => {
                   // Autoplay prevented
                 });
               }
             }
-            observer.unobserve(entry.target);
+          } else {
+            // Pause when out of view to save resources
+            if (internalRef.current && !internalRef.current.paused) {
+              internalRef.current.pause();
+            }
           }
         });
       },
@@ -156,21 +175,26 @@ export const Asset = forwardRef<HTMLVideoElement | HTMLImageElement, AssetProps>
       )}
 
       {isValid && isImage && (
-        <img
-          ref={internalRef}
-          src={src}
-          alt={alt}
-          loading={loading}
-          className={cn(
-            "transition-opacity duration-700 w-full h-full object-cover",
-            loaded && !error ? "opacity-100" : "opacity-0",
-            className
-          )}
-          onLoad={handleLoad}
-          onError={handleError}
-          referrerPolicy="no-referrer"
-          {...props}
-        />
+        <picture>
+          {webpSrc && <source srcSet={webpSrc} type="image/webp" />}
+          <img
+            ref={internalRef}
+            src={src}
+            alt={alt}
+            loading={loading}
+            srcSet={srcSet}
+            sizes={sizes}
+            className={cn(
+              "transition-opacity duration-700 w-full h-full object-cover",
+              loaded && !error ? "opacity-100" : "opacity-0",
+              className
+            )}
+            onLoad={handleLoad}
+            onError={handleError}
+            referrerPolicy="no-referrer"
+            {...props}
+          />
+        </picture>
       )}
 
       {isValid && isVideo && (
@@ -181,7 +205,7 @@ export const Asset = forwardRef<HTMLVideoElement | HTMLImageElement, AssetProps>
           muted={muted}
           loop={loop}
           playsInline={playsInline}
-          preload="none"
+          preload="metadata"
           className={cn(
             "transition-opacity duration-700 w-full h-full object-cover",
             loaded && !error ? "opacity-100" : "opacity-0",

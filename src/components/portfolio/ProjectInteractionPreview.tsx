@@ -58,6 +58,8 @@ export const ProjectInteractionPreview = memo(({
       {hasVideo && previewVideo && (
         <VideoPreview
           src={previewVideo}
+          poster={`/assets/work/${item.folder}/${item.poster}`}
+          webpPoster={item.webpPoster ? `/assets/work/${item.folder}/${item.webpPoster}` : undefined}
           isVisible={isVideoActive}
           onLoadedMetadata={handleLoadedMetadata}
           onError={handleVideoError}

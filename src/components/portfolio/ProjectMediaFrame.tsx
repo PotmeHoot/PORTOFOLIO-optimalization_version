@@ -5,12 +5,13 @@ import { Project } from "../../types/content";
 
 interface ProjectMediaFrameProps {
   poster?: string;
+  webpPoster?: string;
   title: string;
   isIdle: boolean;
   isActive: boolean;
 }
 
-export const ProjectMediaFrame = ({ poster, title, isIdle, isActive }: ProjectMediaFrameProps) => {
+export const ProjectMediaFrame = ({ poster, webpPoster, title, isIdle, isActive }: ProjectMediaFrameProps) => {
   const fallback = <ImagePlaceholder />;
 
   return (
@@ -26,6 +27,7 @@ export const ProjectMediaFrame = ({ poster, title, isIdle, isActive }: ProjectMe
       {poster ? (
         <Asset
           src={poster}
+          webpSrc={webpPoster}
           alt={title}
           className="w-full h-full object-cover grayscale-[0.6] group-hover:grayscale-0 transition-all duration-700"
           containerClassName="w-full h-full"
