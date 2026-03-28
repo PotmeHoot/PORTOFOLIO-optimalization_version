@@ -1,0 +1,111 @@
+{
+  "projects": [
+    {
+      "id": "biedronka",
+      "title": "Biedronka",
+      "category": "Retail / Social",
+      "folder": "biedronka",
+      "poster": "poster.jpg",
+      "client": "Biedronka",
+      "agency": "MAYER/McCANN",
+      "year": "2024-2025",
+      "shortDescription": "Vysoko výkonná grafika pre sociálne siete a carouselové príspevky pre najväčší poľský reťazec supermarketov.",
+      "status": "ready",
+      "featured": true,
+      "order": 1,
+      "assets": [
+        { "type": "image", "file": "preview-01.jpg" },
+        { "type": "image", "file": "preview-02.jpg" },
+        { "type": "image", "file": "preview-03.jpg" }
+      ]
+    },
+    {
+      "id": "raiffeisen",
+      "title": "Raiffeisen Bank",
+      "category": "Banking / Digital",
+      "folder": "raiffeisen",
+      "poster": "poster.jpg",
+      "client": "Raiffeisen Bank",
+      "year": "2024",
+      "shortDescription": "Digitálne podklady a kampaňová grafika pre bankové produkty a služby.",
+      "status": "ready",
+      "featured": true,
+      "order": 2,
+      "assets": [
+        { "type": "image", "file": "preview-01.jpg" },
+        { "type": "image", "file": "preview-02.jpg" }
+      ]
+    },
+    {
+      "id": "molicare",
+      "title": "Hartmann / MoliCare",
+      "category": "Healthcare / Social",
+      "folder": "molicare",
+      "poster": "poster.jpg",
+      "client": "Hartmann / MoliCare",
+      "year": "2024",
+      "shortDescription": "Komplexné vizuály pre kampane na sociálnych sieťach pre produkty zdravotnej starostlivosti a hygieny.",
+      "status": "ready",
+      "featured": true,
+      "order": 3,
+      "assets": [
+        { "type": "image", "file": "preview-01.jpg" },
+        { "type": "image", "file": "preview-02.jpg" },
+        { "type": "image", "file": "preview-03.jpg" }
+      ]
+    },
+    {
+      "id": "brokeria",
+      "title": "Brokeria",
+      "category": "Finance / Identity",
+      "folder": "brokeria",
+      "poster": "poster.jpg",
+      "client": "Brokeria",
+      "year": "2023",
+      "shortDescription": "Modernizácia vizuálnej identity a tvorba digitálnych komunikačných kanálov.",
+      "status": "ready",
+      "featured": true,
+      "order": 4,
+      "assets": [
+        { "type": "image", "file": "preview-01.jpg" },
+        { "type": "image", "file": "preview-02.jpg" }
+      ]
+    },
+    {
+      "id": "motion",
+      "title": "AI Visual Production",
+      "category": "AI / Motion",
+      "folder": "motion",
+      "poster": "poster.jpg",
+      "client": "Personal / R&D",
+      "year": "2025",
+      "shortDescription": "Skúmanie prepojenia obrazov generovaných AI a komerčného motion dizajnu.",
+      "status": "ready",
+      "featured": true,
+      "order": 5,
+      "assets": [
+        { "type": "video", "file": "preview.mp4" }
+      ]
+    }
+  ],
+  "arItems": [
+    {
+      "id": "tiktok-filter-1",
+      "title": "TikTok Interactive Effect",
+      "platform": "TikTok",
+      "status": "ready",
+      "link": "https://www.tiktok.com/...",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "tiktok-filter-2",
+      "title": "TikTok Brand Experience",
+      "platform": "TikTok",
+      "status": "coming_soon",
+      "link": "#",
+      "featured": true,
+      "order": 2
+    }
+  ]
+}

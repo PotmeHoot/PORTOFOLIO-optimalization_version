@@ -1,0 +1,249 @@
+{
+  "settings": {
+    "title": "Juraj Žáček | Senior Graphic Designer & Content Specialist",
+    "ownerName": "Juraj Žáček",
+    "email": "jurajzacek13@gmail.com",
+    "location": "Bratislava, Slovensko",
+    "inquireLabel": "Dopyt",
+    "seo": {
+      "description": "Osobné portfólio Juraja Žáčka, senior grafického dizajnéra z Bratislavy. Špecializácia na výkonný obsah pre sociálne siete, motion grafiku a AI vizuály pre globálne značky.",
+      "keywords": [
+        "Grafický dizajn",
+        "Motion grafika",
+        "AI vizuály",
+        "Obsah pre sociálne siete",
+        "Bratislava",
+        "Slovensko"
+      ],
+      "ogImage": "/assets/og-image.jpg"
+    }
+  },
+  "footer": {
+    "privacyLabel": "Súkromie",
+    "termsLabel": "Podmienky",
+    "cookiePolicyLabel": "Cookies",
+    "rightsReservedLabel": "ALL RIGHTS RESERVED."
+  },
+  "error": {
+    "title": "Nepodarilo sa načítať obsah",
+    "description": "Skúste, prosím, obnoviť stránku.",
+    "retryLabel": "Skúsiť znova",
+    "invalidFormatLabel": "Neplatný formát",
+    "missingAssetLabel": "Chýbajúci súbor"
+  },
+  "navigation": [
+    { "id": "showreel", "label": "Showreel", "visible": true, "order": 1 },
+    { "id": "work", "label": "Vybrané práce", "visible": true, "order": 2 },
+    { "id": "about", "label": "O mne", "visible": true, "order": 3 },
+    { "id": "services", "label": "Služby", "visible": true, "order": 4 },
+    { "id": "ar", "label": "AR Filtre", "visible": true, "order": 5 },
+    { "id": "collaboration", "label": "Spolupráca", "visible": true, "order": 6 },
+    { "id": "contact", "label": "Kontakt", "visible": true, "order": 7 }
+  ],
+  "hero": {
+    "backgroundImage": "/assets/hero/main.jpg",
+    "eyebrow": "Senior Graphic Designer & Content Specialist",
+    "title": "Tvorím vizuály, motion a AI obsah pre značky, ktoré chcú vyniknúť.",
+    "description": "Pomáham značkám a agentúram vytvárať pôsobivý obsah pre sociálne siete, motion grafiku a vizuály s podporou AI, ktoré prinášajú zásah a výsledky.",
+    "ctaPrimary": { "label": "Poďme spolupracovať", "href": "#contact" },
+    "ctaSecondary": { "label": "Pozrieť vybrané práce", "href": "#work" },
+    "stats": [
+      { "label": "Rokov skúseností", "value": "8+" },
+      { "label": "Dodaných projektov", "value": "200+" },
+      { "label": "Globálnych značiek", "value": "15+" }
+    ],
+    "availabilityLabel": "Dostupný pre vybrané projekty",
+    "scrollLabel": "Objavte viac"
+  },
+  "showreel": {
+    "eyebrow": "Motion & Events Showreel",
+    "title": "Veľkoformátový motion dizajn pre globálne podujatia.",
+    "description": "Špecializujem sa na vytváranie vysoko pôsobivého vizuálneho obsahu pre veľké konferencie, pódiové obrazovky a imerzívne eventové prostredia. Moje skúsenosti zahŕňajú on-site vizuálnu adaptáciu a dizajn pre komplexné rozloženia obrazoviek, ktoré pútajú pozornosť v živých produkciách.",
+    "highlights": [
+      "Konferenčné vizuály",
+      "Pódiové obrazovky",
+      "Eventový motion dizajn",
+      "Veľkoformátový obsah",
+      "On-site adaptácia"
+    ],
+    "poster": "/assets/showreel/poster.jpg",
+    "videoUrl": "/assets/showreel/reel.mp4",
+    "videoLabel": "Motion portfólio",
+    "highlightsLabel": "Kľúčové oblasti",
+    "cta": { "label": "Pozrieť Showreel", "href": "#showreel" },
+    "featured": true
+  },
+  "portfolio": {
+    "eyebrow": "Portfólio",
+    "description": "Výber výkonného obsahu navrhnutého tak, aby škáloval moderné značky a prinášal reálne výsledky.",
+    "trustedByLabel": "Dôverujú mi",
+    "graphicWorkLabel": "Grafická tvorba",
+    "motionWorkLabel": "Motion tvorba",
+    "videoIndicatorLabel": "Video",
+    "comingSoonLabel": "Už čoskoro",
+    "clientLabel": "Klient",
+    "agencyLabel": "Agentúra",
+    "yearLabel": "Rok",
+    "viewProjectLabel": "Pozrieť projekt",
+    "backToProjectsLabel": "Späť na projekty",
+    "projectDetailsLabel": "Detaily projektu",
+    "descriptionLabel": "Popis",
+    "galleryLabel": "Galéria projektu"
+  },
+  "arShowcase": {
+    "eyebrow": "Interaktívne technológie",
+    "title": "AR Filtre.",
+    "description": "Interaktívne AR filtre pre TikTok. Spájanie grafického dizajnu s interaktívnou technológiou na vytváranie zážitkov, ktoré zastavia scrollovanie.",
+    "platformLabel": "TikTok Effect House",
+    "comingSoonLabel": "Už čoskoro",
+    "features": [
+      { "title": "Effect House", "desc": "Pokročilá tvorba TikTok filtrov s vysokým virálnym potenciálom." },
+      { "title": "3D Integrácia", "desc": "Plynulé vkladanie 3D objektov do reálneho prostredia." },
+      { "title": "Motion Tracking", "desc": "Vysoko presné sledovanie tváre a tela pre imerzívne efekty." }
+    ]
+  },
+  "services": {
+    "eyebrow": "Expertíza",
+    "title": "Expertíza a služby",
+    "description": "Špecializované vizuálne riešenia pre moderné digitálne platformy.",
+    "items": [
+      {
+        "id": "social",
+        "title": "Grafika pre sociálne siete",
+        "description": "Statický a carouselový obsah optimalizovaný pre vysoký zásah a konzistenciu značky na všetkých platformách.",
+        "icon": "Layout",
+        "order": 1
+      },
+      {
+        "id": "motion",
+        "title": "Reels & Motion obsah",
+        "description": "Dynamický video obsah a motion grafika navrhnutá tak, aby zachytila pozornosť v prvých sekundách.",
+        "icon": "Play",
+        "order": 2
+      },
+      {
+        "id": "ai",
+        "title": "Produkcia s podporou AI",
+        "description": "Využívanie špičkových AI nástrojov na urýchlenie vizuálnej produkcie a vytváranie unikátnych vizuálov.",
+        "icon": "Cpu",
+        "order": 3
+      },
+      {
+        "id": "ar",
+        "title": "AR Filtre",
+        "description": "Interaktívne zážitky rozšírenej reality pre TikTok, ktoré zvyšujú interakciu so značkou.",
+        "icon": "Sparkles",
+        "order": 4
+      }
+    ]
+  },
+  "collaboration": {
+    "eyebrow": "Spolupráca",
+    "title": "Ako pracujeme",
+    "description": "Štruktúrovaný prístup k dodávaniu vysokokvalitného vizuálneho obsahu.",
+    "stepLabel": "Krok",
+    "steps": [
+      {
+        "id": "brief",
+        "title": "Briefing a stratégia",
+        "description": "Pochopenie vašich cieľov, cieľovej skupiny a požiadaviek platformy.",
+        "icon": "MessageSquare",
+        "order": 1
+      },
+      {
+        "id": "concept",
+        "title": "Koncept a moodboard",
+        "description": "Vývoj vizuálneho smerovania a kreatívnych konceptov na schválenie.",
+        "icon": "Palette",
+        "order": 2
+      },
+      {
+        "id": "production",
+        "title": "Produkcia a motion",
+        "description": "Realizácia dizajnov, motion grafiky alebo vizuálov s podporou AI.",
+        "icon": "Zap",
+        "order": 3
+      },
+      {
+        "id": "delivery",
+        "title": "Revízia a dodanie",
+        "description": "Doladenie výstupov na základe spätnej väzby a dodanie finálnych súborov pripravených na produkciu.",
+        "icon": "CheckCircle",
+        "order": 4
+      }
+    ]
+  },
+  "contact": {
+    "title": "Poďme tvoriť",
+    "subtitle": "niečo",
+    "highlight": "ikonické.",
+    "description": "Či už ste agentúra hľadajúca spoľahlivého partnera alebo značka potrebujúca špičkový obsah, som tu, aby som vám pomohol.",
+    "cta": "Začať projekt",
+    "status": "Dostupný pre nové projekty",
+    "email": "jurajzacek13@gmail.com",
+    "directLabel": "Priamy kontakt",
+    "socialLabel": "Sociálne siete",
+    "socials": [
+      { "name": "LinkedIn", "url": "#", "icon": "Linkedin" },
+      { "name": "TikTok", "url": "#", "icon": "Video" },
+      { "name": "Behance", "url": "#", "icon": "ExternalLink" }
+    ]
+  },
+  "about": {
+    "eyebrow": "O mne",
+    "title": "Zameriavam sa na prepojenie dizajnu, pohybu a technológií.",
+    "description": "Pôsobím v Bratislave a spolupracujem s poprednými agentúrami a značkami na dodávaní vysokokvalitného vizuálneho obsahu. Môj prístup kombinuje tradičné princípy grafického dizajnu s modernými nástrojmi AI a motion grafikou, aby som vytvoril obsah, ktorý vynikne v dnešnom rýchlom digitálnom svete.",
+    "brandsLabel": "Vybrané značky",
+    "expertiseLabel": "Expertíza",
+    "experienceEyebrow": "Skúsenosti",
+    "experienceTitle": "Kariéra",
+    "toolsEyebrow": "Nástroje a AI",
+    "toolsTitle": "Stack",
+    "expertise": [
+      "Stratégia a dizajn pre sociálne siete",
+      "Motion grafika a produkcia Reels",
+      "Vizuálna tvorba s podporou AI",
+      "TikTok AR filtre (Effect House)",
+      "Kampaňové vizuály a Key Visuals"
+    ],
+    "experience": [
+      {
+        "icon": "Briefcase",
+        "title": "Senior grafický dizajnér",
+        "desc": "Špecializácia na výkonný obsah pre sociálne siete a motion grafiku pre globálne značky."
+      },
+      {
+        "icon": "Zap",
+        "title": "Špecialista na AI vizuály",
+        "desc": "Integrácia špičkových AI nástrojov do kreatívnych procesov na urýchlenie produkcie a zvýšenie kvality."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Špecialista na TikTok AR",
+        "desc": "Vytváranie interaktívnych zážitkov rozšírenej reality exkluzívne pre TikTok (Effect House)."
+      }
+    ],
+    "tools": [
+      {
+        "name": "Adobe Creative Cloud",
+        "level": "Expert",
+        "desc": "Photoshop, Illustrator, After Effects, Premiere Pro."
+      },
+      {
+        "name": "AI produkčný stack",
+        "level": "Pokročilý",
+        "desc": "Midjourney, Stable Diffusion, Runway Gen-2, Magnific AI."
+      },
+      {
+        "name": "AR vývoj",
+        "level": "Expert",
+        "desc": "Špecialista na Effect House (TikTok)."
+      },
+      {
+        "name": "Motion dizajn",
+        "level": "Expert",
+        "desc": "Špičkové Reels, kinetická typografia a animácie značiek."
+      }
+    ]
+  }
+}
