@@ -13,7 +13,7 @@ export const Expertise = () => {
   const { about } = content;
 
   return (
-    <SectionWrapper id="experience" className="border-t border-white/5">
+    <SectionWrapper className="border-t border-white/5">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[120px] -z-10" />
       
       <motion.div 

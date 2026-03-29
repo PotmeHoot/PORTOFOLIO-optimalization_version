@@ -13,7 +13,7 @@ export const About = () => {
   const clients = Array.from(new Set(projects.map(p => p.client))).filter(c => c !== "Personal / R&D");
 
   return (
-    <SectionWrapper id="about" className="bg-black" containerClassName="max-w-5xl">
+    <SectionWrapper className="bg-black" containerClassName="max-w-5xl">
       {/* Subtle Accent Glow */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px] -z-10" />
       

@@ -12,7 +12,7 @@ export const Collaboration = () => {
   const { collaboration } = content;
 
   return (
-    <SectionWrapper id="collaboration" className="bg-bg-secondary">
+    <SectionWrapper className="bg-bg-secondary">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
       
       <motion.div

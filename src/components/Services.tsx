@@ -12,7 +12,7 @@ export const Services = () => {
   const { services } = content;
 
   return (
-    <SectionWrapper id="services">
+    <SectionWrapper>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/[0.03] rounded-full blur-[120px] -z-10" />
       
       <motion.div

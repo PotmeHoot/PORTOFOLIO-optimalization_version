@@ -71,12 +71,12 @@ function AppContent() {
         <Showreel />
         <Portfolio />
         <Suspense fallback={<SectionLoader />}>
-          <LazySection><About /></LazySection>
-          <LazySection><Services /></LazySection>
-          <LazySection><ARShowcase /></LazySection>
-          <LazySection><Expertise /></LazySection>
-          <LazySection><Collaboration /></LazySection>
-          <LazySection><Contact /></LazySection>
+          <LazySection id="about"><About /></LazySection>
+          <LazySection id="services"><Services /></LazySection>
+          <LazySection id="ar"><ARShowcase /></LazySection>
+          <LazySection id="experience"><Expertise /></LazySection>
+          <LazySection id="collaboration" rootMargin="1200px"><Collaboration /></LazySection>
+          <LazySection id="contact" rootMargin="1200px"><Contact /></LazySection>
         </Suspense>
       </main>
       <Suspense fallback={null}>

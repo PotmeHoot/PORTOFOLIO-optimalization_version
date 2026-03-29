@@ -1,11 +1,17 @@
 import { useSiteContent } from "../hooks/useSiteContent";
 import { Button } from "./ui/Button";
 import { useActiveSection } from "../hooks/useActiveSection";
+import { scrollToSection } from "../lib/navigation";
+import { MouseEvent } from "react";
 
 export const Navbar = () => {
   const { content } = useSiteContent();
   const { navigation, settings } = content;
   const activeSection = useActiveSection(navigation.map(n => n.id));
+
+  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
+    scrollToSection(e, `#${id}`);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6 pointer-events-none">
@@ -17,6 +23,7 @@ export const Navbar = () => {
             <a 
               key={link.id}
               href={`#${link.id}`} 
+              onClick={(e) => handleLinkClick(e, link.id)}
               className={`transition-colors ${activeSection === link.id ? "text-white" : "hover:text-white"}`}
               aria-current={activeSection === link.id ? "page" : undefined}
             >

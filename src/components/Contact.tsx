@@ -13,7 +13,7 @@ export const Contact = () => {
   const { contact, settings } = content;
 
   return (
-    <SectionWrapper id="contact" containerClassName="max-w-5xl text-center">
+    <SectionWrapper containerClassName="max-w-5xl text-center">
       {/* Subtle Ambient Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl aspect-square bg-white/[0.02] rounded-full blur-[120px] -z-10" />
       
