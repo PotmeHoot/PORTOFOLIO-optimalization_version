@@ -1,64 +1,26 @@
 import { 
   CheckCircle2 as CheckCircle, 
-  ArrowRight, 
   Sparkles, 
-  Video, 
-  QrCode, 
-  ExternalLink, 
-  Maximize2, 
-  Volume2, 
   Play, 
-  Image as ImageIcon, 
-  X, 
-  ArrowLeft, 
-  Mail, 
-  Linkedin, 
-  Instagram, 
-  Globe, 
-  Layers, 
   Zap, 
-  Target, 
   Cpu, 
-  Smartphone, 
   Palette, 
-  Monitor, 
-  Code, 
   Briefcase, 
   MessageSquare, 
   Layout, 
-  AlertCircle,
   LucideIcon
 } from "lucide-react";
 
 export const Icons: Record<string, LucideIcon> = {
   CheckCircle,
-  ArrowRight,
   Sparkles,
-  Video,
-  QrCode,
-  ExternalLink,
-  Maximize2,
-  Volume2,
   Play,
-  ImageIcon,
-  X,
-  ArrowLeft,
-  Mail,
-  Linkedin,
-  Instagram,
-  Globe,
-  Layers,
   Zap,
-  Target,
   Cpu,
-  Smartphone,
   Palette,
-  Monitor,
-  Code,
   Briefcase,
   MessageSquare,
-  Layout,
-  AlertCircle
+  Layout
 };
 
 export type IconName = keyof typeof Icons;
@@ -121,7 +83,6 @@ export interface ShowreelContent {
 }
 
 export type ProjectStatus = 'ready' | 'coming_soon' | 'hidden';
-export type MediaType = 'image' | 'video' | 'mixed';
 
 export interface ProjectAsset {
   type: 'image' | 'video';

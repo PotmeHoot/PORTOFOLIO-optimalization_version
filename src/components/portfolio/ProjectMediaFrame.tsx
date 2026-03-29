@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Asset } from "../ui/Asset";
-import { ImagePlaceholder, VideoPlaceholder } from "./ProjectPlaceholders";
+import { ImagePlaceholder } from "./ProjectPlaceholders";
 import { Project } from "../../types/content";
 
 interface ProjectMediaFrameProps {

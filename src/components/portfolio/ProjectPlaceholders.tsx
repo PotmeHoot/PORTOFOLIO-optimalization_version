@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Image, Play, Circle } from "lucide-react";
+import { Image, Play } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { useSiteContent } from "../../hooks/useSiteContent";
 
@@ -167,16 +167,6 @@ export const VideoPlaceholder = ({ className }: PlaceholderProps) => {
           <div className="w-8 h-px bg-white/5" />
         </div>
       </motion.div>
-    </div>
-  );
-};
-
-export const IconPlaceholder = ({ className }: PlaceholderProps) => {
-  return (
-    <div className={cn("flex items-center justify-center", className)}>
-      <div className="p-2 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
-        <Circle className="w-4 h-4 text-white/20" strokeWidth={1} />
-      </div>
     </div>
   );
 };
